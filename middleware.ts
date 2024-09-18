@@ -1,9 +1,8 @@
-import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs';
-import { NextResponse } from 'next/server';
-import { clerkMiddleware } from "@clerk/nextjs/server";
+import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs'
+import { NextResponse } from 'next/server'
 
-import type { NextRequest } from 'next/server';
-import { Database } from './types/supabase';
+import type { NextRequest } from 'next/server'
+import { Database } from './types/supabase'
 
 export async function middleware(req: NextRequest) {
   const res = NextResponse.next()
@@ -11,10 +10,3 @@ export async function middleware(req: NextRequest) {
   await supabase.auth.getSession()
   return res
 }
-
-export default clerkMiddleware();
-
-export const config = {
-  matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
-};
-
