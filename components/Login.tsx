@@ -79,6 +79,17 @@ export const Login = ({
     console.log(data, error);
   };
 
+  const signInWithGithub = async () => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "github",
+      options: {
+        redirectTo: redirectUrl,
+      },
+    });
+
+    console.log(data, error);
+  };
+
   const signInWithMagicLink = async (email: string) => {
     const { error } = await supabase.auth.signInWithOtp({
       email,
@@ -110,6 +121,15 @@ export const Login = ({
           >
             <AiOutlineGoogle size={20} />
             <span className="pl-2">Continue with Google</span>
+          </Button>
+
+          <Button
+            onClick={signInWithGithub}
+            variant={"google"}
+            className="font-semibold p-8 rounded-full"
+          >
+            <AiOutlineGoogle size={20} />
+            <span className="pl-2">Continue with Github</span>
           </Button>
           
           <p className="italic text-center text-sm text-gray-500 pt-6">or with email</p>
