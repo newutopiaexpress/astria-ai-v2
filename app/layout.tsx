@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
-      <body className="bg-fixed flex flex-col bg-stone-200 ">
+      <body className="bg-fixed flex flex-col bg-stone-200">
         <div className="min-h-screen">
               <section>
                 <Suspense

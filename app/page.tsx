@@ -25,7 +25,7 @@ export default async function Index() {
 
   return (
  
-    <div>
+    <div className="mx-4 md:mx-0">
       <Bento2/>
     </div>
 
