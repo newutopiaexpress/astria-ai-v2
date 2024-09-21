@@ -11,14 +11,23 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@radix-ui/react-dropdown-menu";
 import { FaFemale, FaMale, FaRainbow } from "react-icons/fa";
 
+
 export function Bento2() {
   return (
-	<div className="grid grid-cols-1 lg:grid-cols-12 md:gap-6 min-h-screen lg:max-w-[1200px] lg:py-6 mx-auto">
+<div>
+	<div className="grid grid-cols-1 lg:grid-cols-12 md:gap-6  lg:max-w-[1200px] md:mt-12 mx-auto">
 
-        <div className="md:col-span-8 lg:col-span-9 mb-6">
+        <div className="md:col-span-8 lg:col-span-9 mb-6 md:mb-0">
             <div className="bg-stone-950 rounded-3xl grid md:grid-cols-2 md:gap-0 relative">
                 <Link href="/login" className="absolute top-0 right-0 z-40 w-20 h-20 bg-stone-900 rounded-full hidden md:block outline outline-offset-2 outline-stone-300 hover:outline-stone-300/0">
                     <CamIcon/>
+                    <Image
+                        className="z-10 hover:-rotate-6 transition-all duration-50"
+                        height="100"
+                        width="100"
+                        alt="hello"
+                        src="/lens.png">
+                    </Image>
                 </Link>
                 <Image
                     className="absolute top-0 right-0 z-10  hidden md:block"
@@ -31,7 +40,7 @@ export function Bento2() {
 
                 <div className="md:col-span-1 relative p-6 min-h-[500px]">
                     <div className="absolute left-8 bottom-[240px] max-w-96">
-                        <h1 className="text-stone-300 font-thin tracking-tight drop-shadow-sm [text-wrap:balance] text-4xl leading-[2.5rem] md:text-5xl md:leading-[3rem]">Stunningly lifelike portraits, as if taken by a professional photographer. </h1>
+                        <h1 className="text-stone-300 font-thin tracking-tight drop-shadow-sm [text-wrap:balance] text-4xl leading-[2.5rem] md:text-5xl md:leading-[3rem]">Stunningly lifelike photos, as if taken by a professional photographer. </h1>
                     </div>
                     <div className="absolute left-8 -bottom-16 w-96">
                         <p className="text-stone-400 font-thin drop-shadow-sm [text-wrap:balance] text-md italic">Upload your photos and let the magic happen</p>
@@ -65,17 +74,16 @@ export function Bento2() {
                 <div className="order-1 md:col-span-1 relative p-6 bg-cover bg-center md:bg-right rounded-3xl min-h-[700px]"  style={{ backgroundImage: "url('/ai.png')" }}>
                 </div>
 
-            </div>
+            </div> 
 
-            <div className="bg-stone-950 rounded-3xl p-6 mt-6 md:max-w-3xl md:float-right">
-                <h1 className="text-stone-300 font-thin tracking-tight drop-shadow-sm [text-wrap:balance] text-2xl leading-[2.5rem] md:text-3xl md:leading-[3rem]">Create photos in the modern way</h1>
-            </div>
+            <div className="md:w-2/3 md:float-right mt-6 mb-16 border border-stone-300 rounded-3xl p-6 text-center md:text-right bg-gradient-to-tr from-black to-stone-900">
+                <h1 className="font-thin tracking-tight drop-shadow-sm [text-wrap:balance] text-4xl leading-[2.5rem] md:text-5xl md:leading-[2.7rem] text-stone-100">Take photos with Ai, that <span className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">sees your inner beauty</span></h1>
+                <p className="text-stone-400 font-thin drop-shadow-sm [text-wrap:balance] text-md italic mt-4">Powered by: Flux AI by <Link className="text-stone-500 font-normal" target="_blank" href="https://blackforestlabs.ai/">Black Forest Labs</Link>  </p>
+            </div> 
 
         </div>
 
-        <div className="md:col-span-4 lg:col-span-3 flex flex-col">
-
-            
+        <div className="md:col-span-4 lg:col-span-3 flex flex-col">  
 
             <div className="mb-6 bg-slate-100 rounded-3xl relative p-6 shadow-md shadow-stone-600/10 transition-all duration-50 hover:shadow-xl">
                 <p className="text-md mb-4">"Loved the variety and styling. Very happy with the images!"</p>
@@ -89,7 +97,21 @@ export function Bento2() {
                 <p className="text-sm font-bold align-baseline mt-6">
                     Barbara
                 </p>
-            </div>
+            </div>  
+
+            <div className="mb-6 bg-slate-100 rounded-3xl relative p-6 shadow-md shadow-stone-600/10 transition-all duration-50 hover:shadow-xl">
+                <p className="text-md mb-4">"The results were quick and I couldn't be more happy with the images. I recommend and have done so with my colleagues and family."</p>
+                <Image
+                        className="w-10 h-10 rounded-full float-left mr-2"
+                        height="512"
+                        width="512"
+                        alt="hello"
+                        src="/square.png">
+                </Image>
+                <p className="text-sm font-bold align-baseline mt-6">
+                    Barbara
+                </p>
+            </div> 
 
             <div className="relative mb-6 min-h-96 bg-slate-100 text-stone-200 rounded-3xl p-6 shadow-md shadow-stone-600/10 transition-all duration-50 hover:shadow-xl bg-cover" style={{ backgroundImage: "url('/v0.png')" }}>
                 <div className="absolute bottom-4">
@@ -105,25 +127,257 @@ export function Bento2() {
                         - Dee Dee Cormier
                     </p>
                 </div>
-            </div>
-
-            <div className="mb-6 bg-slate-100 rounded-3xl relative p-6 shadow-md shadow-stone-600/10 transition-all duration-50 hover:shadow-xl">
-                <p className="text-md mb-4">"Amazing! I was surprised at how simple the whole process was to complete! The results were quick and I couldn't be more happy with the images. I recommend and have done so with my colleagues and family."</p>
-                <Image
-                        className="w-10 h-10 rounded-full float-left mr-2"
-                        height="512"
-                        width="512"
-                        alt="hello"
-                        src="/square.png">
-                </Image>
-                <p className="text-sm font-bold align-baseline mt-6">
-                    Barbara
-                </p>
-            </div>   
+            </div>  
 
         </div>
         
 	</div>
+
+    <div className="lg:max-w-[1200px] mx-auto mb-6">
+
+
+            <div className="h-fit mx-auto">
+                <div className="grid md:grid-cols-1 md:gap-12 lg:gap-16 relative mb-6 text-center mx-auto">
+                        <div className="mx-auto transition-all w-52 h-52 bg-stone-200 hover:bg-slate-100 rounded-full z-10 col-span-1 relative p-6 shadow-md outline outline-8 hover:outline-2 hover:outline-offset-4 outline-offset-8 outline-stone-300/20 hover:outline-fuchsia-300/40">
+                            <p className="mx-auto w-8 h-8 shadow-inner bg-stone-200 text-stone-600 rounded-full text-center content-center">1</p><br/>
+                            <p className="font-bold  mb-2 leading-tight">Upload 8-16 pictures of yourself</p>
+                            <p className="text-xs mb-6">
+                                <Link href="/login" className="underline underline-offset-1 italic">
+                                    How to get the best results?
+                                </Link>
+                            </p>
+                        </div>
+                        <div className="mx-auto transition-all w-52 h-52 bg-stone-100 hover:bg-slate-100 rounded-full z-10 col-span-1 relative p-6 shadow-md outline outline-8 hover:outline-2 hover:outline-offset-4 outline-offset-8 outline-stone-300/20 hover:outline-sky-300/40">
+                        <p className="mx-auto w-8 h-8 shadow-inner bg-stone-200 text-stone-600 rounded-full text-center content-center">3</p><br/>
+                            <p className="font-bold mb-2 leading-tight">We train a custom AI model for you</p>
+                            <p className="text-xs mb-6">
+                                We use the latest technology by
+                                <Link href="/login" className="underline underline-offset-1 italic ml-1">
+                                    Flux AI
+                                </Link>
+                            </p>
+                        </div>
+                        <div className="mx-auto transition-all w-52 h-52 bg-stone-200 hover:bg-slate-100 rounded-full z-10 col-span-1 relative p-6 shadow-md outline outline-8 hover:outline-2 hover:outline-offset-4 outline-offset-8 outline-stone-300/20 hover:outline-lime-300/40">
+                        <p className="mx-auto w-8 h-8 shadow-inner bg-stone-200 text-stone-600 rounded-full text-center content-center">4</p><br/>
+                            <p className="font-bold mb-2 leading-tight">Get your portrait photos</p>
+                        </div>
+                </div>
+            </div>
+
+        <h1 className="text-center px-6 py-12 text-stone-800 font-thin tracking-tight drop-shadow-sm [text-wrap:balance] text-4xl leading-[2.5rem] md:text-5xl md:leading-[3rem]">Studio quality photos, minus the studio costs</h1>
+        <div className="mx-auto text-center scale-125 pb-12">
+            <Link href="/login" className="ml-4">
+                <Button variant={"google"} size={"md"}>Login with Google
+                    <AiOutlineGoogle size={20} className="ml-2"/>
+                </Button>
+            </Link>
+        </div>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 md:gap-9 lg:max-w-[1200px] mx-auto">
+
+                        <div className="mb-6 col-span-1 bg-slate-100 h-50 rounded-3xl relative shadow-md shadow-stone-600/10 hover:scale-105 transition-all duration-50 hover:shadow-xl hover:outline hover:outline-2 hover:outline-offset-4 outline-offset-8 outline-stone-300/20 hover:outline-stone-300/50">
+                            <div className="p-6">  
+                                <p><StarIcon/></p><br/>
+                                <p className="font-bold mt-2">One Session</p>
+                                <p className="text-xs md:h-20">40 photos in 4 different settings, each setting contain 8 photo.</p>
+                                <p className="font-normal text-5xl">
+                                    9<span className="font-normal text-xl">€</span>
+                                    <Link href="/login" className="float-right">
+                                        <Button variant="outline" size="sm">Select</Button>
+                                    </Link>
+                                </p> 
+                            </div>  
+                            <p className="bg-green-200/50 pl-2 pr-2 pb-4 pt-4 rounded-b-3xl text-xs text-center">100% Money Back Guarantee</p>
+                        </div>
+
+                        <div className="mb-6 col-span-1 bg-slate-100 h-50 rounded-3xl relative shadow-md shadow-stone-600/10 hover:scale-105 transition-all duration-50 hover:shadow-xl">
+                            <div className="p-6">  
+                                <p><StarIcon/><StarIcon/><StarIcon/></p><br/>
+                                <p className="font-bold mt-2">3 Session</p>
+                                <p className="text-xs md:h-20">Three modell, 3x12 photos in three different settings.</p>
+                                <p className="font-normal text-5xl">
+                                    25<span className="font-normal text-xl">€</span>
+                                    <Link href="/login" className="float-right">
+                                        <Button variant="outline" size="sm">Select</Button>
+                                    </Link>
+                                </p> 
+                            </div>  
+                            <p className="bg-green-200/50 pl-2 pr-2 pb-4 pt-4 rounded-b-3xl text-xs text-center">100% Money Back Guarantee</p>
+                        </div>
+
+                        <div className="mb-6 col-span-1 bg-slate-100 h-50 rounded-3xl relative shadow-md shadow-stone-600/10 hover:scale-105 transition-all duration-50 hover:shadow-xl">
+                            <div className="p-6">  
+                                <p><StarIcon/><StarIcon/><StarIcon/><StarIcon/><StarIcon/></p><br/>
+                                <p className="font-bold mt-2">5 Session</p>
+                                <p className="text-xs md:h-20">Five modell, 5x12 photos in three different settings.</p>
+                                <p className="font-normal text-5xl">
+                                    39<span className="font-normal text-xl">€</span>
+                                    <Link href="/login" className="float-right">
+                                        <Button variant="outline" size="sm">Select</Button>
+                                    </Link>
+                                </p> 
+                            </div>  
+                            <p className="bg-green-200/50 pl-2 pr-2 pb-4 pt-4 rounded-b-3xl text-xs text-center">100% Money Back Guarantee</p>
+                        </div> 
+    </div>
+
+    <div className="border-0  px-6 py-12  mx-auto">
+            <div className="grid md:grid-cols-4 gap-6 relative">
+                        <div className="col-span-1 bg-stone-200 rounded-3xl relative  shadow-stone-600/10">
+                            <div className="absolute w-60 top-6 left-0 scale-75">
+                                <div className="relative">
+                                    <Image
+                                    className="absolute left-0 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s5.png">
+                                    </Image>
+                                    <Image
+                                    className="absolute left-14 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s6.png">
+                                    </Image>
+                                    <Image
+                                    className="absolute right-16 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s7.png">
+                                    </Image>
+                                </div>
+                            </div>
+                            <Image
+                            className="cover rounded-3xl"
+                            height="896"
+                            width="993"
+                            alt="hello"
+                            src="/male.png">
+                            </Image>
+                        </div>
+                        <div className="col-span-1 bg-stone-200  rounded-3xl relative  shadow-stone-600/10">
+                            <div className="absolute w-60 top-6 left-0 scale-75">
+                                <div className="relative">
+                                    <Image
+                                    className="absolute left-0 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s1.png">
+                                    </Image>
+                                    <Image
+                                    className="absolute left-14 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s2.png">
+                                    </Image>
+                                    <Image
+                                    className="absolute right-16 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s3.png">
+                                    </Image>
+                                </div>
+                            </div>
+                            <Image
+                            className="cover rounded-3xl"
+                            height="1152"
+                            width="896"
+                            alt="hello"
+                            src="/female.png">
+                            </Image>
+                        </div>
+                        <div className="col-span-1 bg-stone-200  rounded-3xl relative  shadow-stone-600/10">
+                            <div className="absolute w-60 top-6 left-0 scale-75">
+                                <div className="relative">
+                                    <Image
+                                    className="absolute left-0 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s5.png">
+                                    </Image>
+                                    <Image
+                                    className="absolute left-14 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s6.png">
+                                    </Image>
+                                    <Image
+                                    className="absolute right-16 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s7.png">
+                                    </Image>
+                                </div>
+                            </div>
+                            <Image
+                            className="cover rounded-3xl"
+                            height="1152"
+                            width="896"
+                            alt="hello"
+                            src="/male2.png">
+                            </Image>
+                        </div>
+                        <div className="col-span-1 bg-stone-200  rounded-3xl relative shadow-stone-600/10">
+                            <div className="absolute w-60 top-6 left-0 scale-75">
+                                <div className="relative">
+                                    <Image
+                                    className="absolute left-0 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s1.png">
+                                    </Image>
+                                    <Image
+                                    className="absolute left-14 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s2.png">
+                                    </Image>
+                                    <Image
+                                    className="absolute right-16 top-0 rounded-full w-16 h-16 shadow-lg"
+                                    height="128"
+                                    width="128"
+                                    alt="hello"
+                                    src="/s3.png">
+                                    </Image>
+                                </div>
+                            </div>
+                            <Image
+                            className="cover rounded-3xl"
+                            height="1071"
+                            width="896"
+                            alt="hello"
+                            src="/v6.png">
+                            </Image>
+                        </div>
+
+                        
+            </div>
+    </div>
+
+    <div className="mx-auto text-center pt-20 pb-16 md:pb-0">
+            <p className="md:border md:border-stone-300 md:rounded-full max-w-max mx-auto py-4 px-6 md:outline md:outline-offset-2 md:outline-stone-300/50">
+                Create your account and get your awesome photos!
+            <Link href="/login" className="ml-4">
+                <Button variant={"google"} size={"md"}>Login with Google
+                    <AiOutlineGoogle size={20} className="ml-2"/>
+                </Button>
+            </Link>
+            </p> 
+    </div>
+
+
+</div>
   )
 }
 
@@ -137,7 +391,7 @@ function CamIcon2() {
 
 function CamIcon() {
     return ( 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" className="z-50 w-10 h-10 text-stone-200 mx-auto my-4 hover:animate-ping">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" className="absolute left-6 top-2 z-50 w-8 h-8 text-stone-200 mx-auto my-4 hover:animate-ping">
  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
 </svg>
 )

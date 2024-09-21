@@ -52,7 +52,7 @@ export const Login = ({
         title: "Something went wrong",
         variant: "destructive",
         description:
-          "Please try again, if the problem persists, contact us at hello@tryleap.ai",
+          "Please try again, if the problem persists, contact us at admin@utopia.express",
         duration: 5000,
       });
     }
@@ -78,7 +78,7 @@ export const Login = ({
 
     console.log(data, error);
   };
-
+/*
   const signInWithGithub = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "github",
@@ -89,7 +89,7 @@ export const Login = ({
 
     console.log(data, error);
   };
-
+*/
   const signInWithMagicLink = async (email: string) => {
     const { error } = await supabase.auth.signInWithOtp({
       email,
@@ -122,7 +122,7 @@ export const Login = ({
             <AiOutlineGoogle size={20} />
             <span className="pl-2">Continue with Google</span>
           </Button>
-
+{/*
           <Button
             onClick={signInWithGithub}
             variant={"google"}
@@ -130,7 +130,7 @@ export const Login = ({
           >
             <AiOutlineGoogle size={20} />
             <span className="pl-2">Continue with Github</span>
-          </Button>
+          </Button>*/}
           
           <p className="italic text-center text-sm text-gray-500 pt-6">or with email</p>
 
